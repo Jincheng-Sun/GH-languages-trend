@@ -11,7 +11,7 @@ from scrapy.downloadermiddlewares.retry import RetryMiddleware
 from scrapy.downloadermiddlewares.retry import RetryMiddleware
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 from scrapy.utils.response import response_status_message
-from scrapy_crawlera import CrawleraMiddleware
+# from scrapy_crawlera import CrawleraMiddleware
 import time
 
 import random
@@ -43,7 +43,7 @@ class CustomRetryMiddleware(RetryMiddleware):
             return response
         if response.status in self.retry_http_codes:
             reason = response_status_message(response.status)
-            time.sleep(600)
+            time.sleep(10)
             return self._retry(request, reason, spider) or response
 
         # this is your check

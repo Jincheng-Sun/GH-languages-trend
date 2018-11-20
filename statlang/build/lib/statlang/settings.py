@@ -53,17 +53,16 @@ SPIDER_MIDDLEWARES = {
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    # 'scrapy_crawlera.CrawleraMiddleware': 300,
-    # 'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None,
-    # 'statlang.middlewares.MyUserAgentMiddleware': 400,
+    'scrapy_crawlera.CrawleraMiddleware': 300,
+    'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None,
+    'statlang.middlewares.MyUserAgentMiddleware': 400,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
     'statlang.middlewares.CustomRetryMiddleware': 550,
     'statlang.middlewares.StatlangDownloaderMiddleware': 543,
 
 }
 CRAWLERA_ENABLED = True
-CRAWLERA_APIKEY = "a0568a7d4c1b49819fe8346d37f97f3d"
-# CRAWLERA_PASS = ''
+CRAWLERA_APIKEY = '63b14fda21684fa8bb7989b17876a243'
 CONCURRENT_REQUESTS = 32
 CONCURRENT_REQUESTS_PER_DOMAIN = 32
 AUTOTHROTTLE_ENABLED = False
@@ -101,7 +100,7 @@ AUTOTHROTTLE_ENABLED = False
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 RETRY_HTTP_CODES = {429}
-RETRY_TIMES = 30
+# RETRY_TIMES = 100
 
 MY_USER_AGENT = [
     "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",

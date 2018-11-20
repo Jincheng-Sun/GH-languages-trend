@@ -25,7 +25,7 @@ def convert_time(timein):
     return dt_start, dt_end
 
 
-date_begin = datetime.datetime(2018, 6, 18, 0, 0, 0)
+date_begin = datetime.datetime(2009, 1, 1, 0, 0, 0)
 date_start, date_end = convert_time(date_begin)
 count=0
 
@@ -33,13 +33,13 @@ class StatsticLang(scrapy.Spider):
     name = "Stat_lang"
     allowed_domains = ['github.com']
     headers = {
-        # 'Authorization': 'token 5aa6cadda5bdc1145e6bc978b62daeb61738584a',
+        'Authorization': 'token 5aa6cadda5bdc1145e6bc978b62daeb61738584a',
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
         "Accept-Encoding": "gzip,deflate",
         "Accept-Language": "en-US,en;q=0.8",
         "Connection": "keep-alive",
         "Content-Type": " application/x-www-form-urlencoded",
-        # "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.111 Safari/537.36",
     }
     start_urls = [
         "https://github.com/search?q=created%3A" + date_start + ".." + date_end + "&type=Repositories",
@@ -64,13 +64,13 @@ class StatsticLang(scrapy.Spider):
             ).extract()
 
             # repos number pushed to Github at this date
-            statlang['repo_num'] = int(re.sub("\D", '', repos_per_day))
+            statlang['repo_num'] = int(re.sub(r'\s+', '', re.sub(' repository results', '', repos_per_day)))
 
             statlang['timestamp'] = convert_time(date_start)[0]
 
             for i in range(1, 11):
                 statlang["n%dlang" % (i)] = re.sub(r'\s+', '', languages[2 * i - 1])
-                statlang["n%dnum" % (i)] = int(re.sub("\D", '', lang_num[i - 1]))
+                statlang["n%dnum" % (i)] = int(re.sub(r'\s', '', lang_num[i - 1]))
 
             # n1lang = re.sub(r'\s+', '', languages[1])  # 2i-1
             # n1num = int(re.sub(r'\s', '', lang_num[0]))  # i-1
@@ -99,7 +99,6 @@ class StatsticLang(scrapy.Spider):
         date_start,date_end=convert_time(date_end)
 
         next_url="https://github.com/search?q=created%3A" + date_start + ".." + date_end + "&type=Repositories"
-        time.sleep(8)
         yield response.follow(next_url,self.parse)
 
 
