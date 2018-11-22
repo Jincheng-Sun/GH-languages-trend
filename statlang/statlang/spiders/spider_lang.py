@@ -4,7 +4,7 @@ from scrapy.selector import Selector
 import re
 from statlang.items import StatlangItem
 import time
-
+import jsonlines
 def timeadd(timein):
     if isinstance(timein,str):
         timein = datetime.datetime.strptime(timein, "%Y-%m-%dT%H:%M:%S")
@@ -24,8 +24,9 @@ def convert_time(timein):
 
     return dt_start, dt_end
 
-
-date_begin = datetime.datetime(2018, 6, 18, 0, 0, 0)
+date_today=datetime.date.today()
+date_today=datetime.datetime(date_today.year,date_today.month,date_today.day)-datetime.timedelta(days=1)
+date_begin = date_today
 date_start, date_end = convert_time(date_begin)
 count=0
 
@@ -99,8 +100,8 @@ class StatsticLang(scrapy.Spider):
         date_start,date_end=convert_time(date_end)
 
         next_url="https://github.com/search?q=created%3A" + date_start + ".." + date_end + "&type=Repositories"
-        time.sleep(8)
-        yield response.follow(next_url,self.parse)
+        time.sleep(1)
+        # yield response.follow(next_url,self.parse)
 
 
 

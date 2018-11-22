@@ -1,21 +1,33 @@
 import jsonlines
 import datetime
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler
-filename='iterm.jl'
+import pandas as pd
 
-def parseJson(lang):
+from sklearn.preprocessing import MinMaxScaler
+import os
+path=os.path.dirname(os.path.realpath(__file__))
+
+filename=path+'/datas/iterm.jl'
+
+def parseJson(lang,total=False):
+    ####
+    #后期修改，直接从数据库读取
+    ####
     dataset=[]
+    time_v=[]
     with open(filename, 'r+', encoding='utf8') as f:
         for item in jsonlines.Reader(f):
             l=''
             n=0
-            for i in range(0,10):
+            if(total):
+                n=float(item['repo_num'])
+            else:
+                for i in range(0, 10):
 
-                if(item['n%dlang'%(i+1)]==lang):
-                    n=float(item['n%dnum'%(i+1)])
+                    if (item['n%dlang' % (i + 1)] == lang):
+                        n = float(item['n%dnum' % (i + 1)])
 
-            # timestamp = datetime.datetime.strptime(item['timestamp'], "%Y-%m-%dT%H:%M:%S")
+            timestamp = datetime.datetime.strptime(item['timestamp'], "%Y-%m-%dT%H:%M:%S")
             #
             # startday = datetime.datetime(2009,1,1,0,0)
             #
@@ -23,6 +35,11 @@ def parseJson(lang):
 
             if(n!=0):
                 dataset.append([n])
+            time_v.append([timestamp, n])
+    #time-value，后期修改，直接从数据库调用
+    time_v=np.array(time_v)
+    time_v=pd.DataFrame(time_v,columns=['timestamp','repo_number'])
+    time_v.to_csv(path+'/datas/%sdata.csv'%lang,encoding='gb18030')
 
     dataset=np.array(dataset)
     trainSeq = dataset[0:int(len(dataset) * 0.8)]
@@ -51,6 +68,4 @@ def create_dataset(dataseq,look_back=7):
     return np.array(dataX), np.array(dataY)
 
 
-
-
-
+parseJson('Python')
