@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
-from trendModel.predService import predTill, predDays
+
 import datetime
 import numpy as np
 import sys
 import os
 sys.path.append(os.path.abspath('../'))
 sys.path.append(os.path.abspath('../trendModel/'))
+from trendModel.predService import predTill, predDays
 app = Flask(__name__)
 
 
