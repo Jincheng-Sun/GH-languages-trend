@@ -35,7 +35,7 @@ def parseJson(lang,total=False):
 
             if(n!=0):
                 dataset.append([n])
-            time_v.append([timestamp, n])
+                time_v.append([timestamp, n])
     #time-value，后期修改，直接从数据库调用
     time_v=np.array(time_v)
     time_v=pd.DataFrame(time_v,columns=['timestamp','repo_number'])
@@ -44,7 +44,8 @@ def parseJson(lang,total=False):
     dataset=np.array(dataset)
     trainSeq = dataset[0:int(len(dataset) * 0.8)]
     testSeq = dataset[int(len(dataset) * 0.8):len(dataset)]
-
+    del time_v
+    del f
     return trainSeq,testSeq,dataset
 
 def fillBlank(array):
@@ -67,5 +68,3 @@ def create_dataset(dataseq,look_back=7):
         dataY.append(dataseq[i + look_back, 0])
     return np.array(dataX), np.array(dataY)
 
-
-parseJson('Python')

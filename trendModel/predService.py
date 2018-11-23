@@ -1,10 +1,11 @@
 import numpy as np
 import datetime
 import pandas as pd
+import keras
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM
 from sklearn.preprocessing import MinMaxScaler
-from createDataset import parseJson, create_dataset
+from .createDataset import parseJson, create_dataset
 import os
 
 path = os.path.dirname(os.path.realpath(__file__))
@@ -27,6 +28,7 @@ def train_model(lang):
     model.compile(loss='mean_squared_error', optimizer='adam')
     model.fit(inputX, inputY, epochs=int(float(dataset.shape[0]) / 10), batch_size=100, verbose=10)
     model.save(path + '/models/%smodel.h5' % language)
+    del model
 
 
 def pred(timestamp, lang):
@@ -65,22 +67,27 @@ def pred(timestamp, lang):
 
 
 def predTill(timestamp, lang):
-    # load model
-    try:
-        model = load_model(path + '/models/%smodel.h5' % lang)
-    except:
-        print('[LOG]:no model found, start training...')
-        train_model(lang)
-        model = load_model(path + '/models/%smodel.h5' % lang)
+    # check constraint
+    lang_list=['C#','C++','CSS','HTML','Java','JavaScript','PHP','Python','Ruby','TypeScript','Perl','C']
+    if lang not in lang_list:
+        return "[ERROR]: No model found for %s"%lang
     # load data
     time_value = pd.read_csv(path + '/datas/%sdata.csv' % lang, encoding='gb18030')
     time_value = pd.DataFrame(time_value, columns=['timestamp', 'repo_number'])
     time_value = np.array(time_value)
-    # output
-    pred = []
 
+    # the date of latest data in csv file
     time_last = time_value[time_value.shape[0] - 1][0]
     time_last = datetime.datetime.strptime(time_last, "%Y-%m-%d %H:%M:%S")
+
+    if (timestamp <= time_last):
+        return "[ERROR]: Please select a date ahead of today"
+
+    # clear old model and load new model
+    keras.backend.clear_session()
+    model = load_model(path + '/models/%smodel.h5' % lang)
+    # output
+    pred = []
 
     while ((timestamp - time_last).days != 0):
         # get last 7 days' data
@@ -89,7 +96,8 @@ def predTill(timestamp, lang):
         scaler = MinMaxScaler(feature_range=(0, 1))
         datas = scaler.fit_transform(datas)
         dataSequence = np.reshape(datas, (1, 1, 7))
-        pre = scaler.inverse_transform(model.predict(dataSequence))
+        pre=model.predict(dataSequence)
+        pre = scaler.inverse_transform(pre)
         print(pre[0][0])
 
         time_last = time_last + datetime.timedelta(days=1)
@@ -101,7 +109,54 @@ def predTill(timestamp, lang):
         # pred.append(pre)
         pred = np.append(pred, int(pre))
 
+    del model
+    del time_value
+
     return pred
 
-# a=predTill(datetime.datetime(2018,11,18),'Python')
-train_model('JavaScript')
+def predDays(days, lang):
+    # check constraint
+    lang_list=['C#','C++','CSS','HTML','Java','JavaScript','PHP','Python','Ruby','TypeScript','Perl','C']
+    if lang not in lang_list:
+        return lang_list
+    # load data
+    time_value = pd.read_csv(path + '/datas/%sdata.csv' % lang, encoding='gb18030')
+    time_value = pd.DataFrame(time_value, columns=['timestamp', 'repo_number'])
+    time_value = np.array(time_value)
+
+
+
+    # clear old model and load new model
+    keras.backend.clear_session()
+    model = load_model(path + '/models/%smodel.h5' % lang)
+    # output
+    pred = []
+
+    while (days!= 0):
+        # get last 7 days' data
+        datas = np.array(time_value[time_value.shape[0] - 7:time_value.shape[0], 1])
+        datas = np.reshape(datas, [7, 1])
+        # scale data
+        scaler = MinMaxScaler(feature_range=(0, 1))
+        datas = scaler.fit_transform(datas)
+        dataSequence = np.reshape(datas, (1, 1, 7))
+        # predict
+        pre=model.predict(dataSequence)
+        # inverse data
+        pre = scaler.inverse_transform(pre)
+
+        update = np.reshape(['pre', pre[0][0]], [1, 2])
+        time_value = np.append(time_value, update, axis=0)
+
+        pred = np.append(pred, int(pre))
+        days-=1
+
+    del model
+    del time_value
+
+    return pred
+
+# a=predTill(datetime.datetime(2018,11,23),'JavaScript')
+# print(a)
+# train_model('JavaScript')
+# train_model('Perl')
