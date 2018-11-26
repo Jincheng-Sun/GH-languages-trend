@@ -5,16 +5,16 @@ import keras
 from keras.models import Sequential, load_model
 from keras.layers import Dense, LSTM
 from sklearn.preprocessing import MinMaxScaler
-from .createDataset import parseJson, create_dataset
+from createDataset import parseJson, create_dataset
+from pymongo import MongoClient
 import os
 
 path = os.path.dirname(os.path.realpath(__file__))
 
 
-def train_model(lang):
-    look_back = 7
+def train_model(lang,total=False,output=1,look_back=7):
     language = lang
-    trainSeq, testSeq, dataset = parseJson(language)
+    trainSeq, testSeq, dataset = parseJson(language,total)
     scaler = MinMaxScaler(feature_range=(0, 1))
     dataSequence = scaler.fit_transform(dataset)
     inputX, inputY = create_dataset(dataSequence, look_back=look_back)
@@ -24,7 +24,7 @@ def train_model(lang):
 
     model = Sequential()
     model.add(LSTM(10, input_shape=(1, look_back)))
-    model.add(Dense(1))
+    model.add(Dense(output))
     model.compile(loss='mean_squared_error', optimizer='adam')
     model.fit(inputX, inputY, epochs=int(float(dataset.shape[0]) / 10), batch_size=100, verbose=10)
     model.save(path + '/models/%smodel.h5' % language)
@@ -120,9 +120,28 @@ def predDays(days, lang):
     if lang not in lang_list:
         return lang_list
     # load data
-    time_value = pd.read_csv(path + '/datas/%sdata.csv' % lang, encoding='gb18030')
-    time_value = pd.DataFrame(time_value, columns=['timestamp', 'repo_number'])
-    time_value = np.array(time_value)
+    # time_value = pd.read_csv(path + '/datas/%sdata.csv' % lang, encoding='gb18030')
+    # time_value = pd.DataFrame(time_value, columns=['timestamp', 'repo_number'])
+    #
+    # time_value = np.array(time_value)
+
+    connection = MongoClient('0.0.0.0', 27017)
+
+    db = connection.GHUserAnalyse
+
+    set = db.Top10Lang
+
+    results = set.find({'language': lang})
+
+    dataset = []
+    for result in results:
+        dataset.append([result['timestamp'], result['number']])
+
+    dataset = np.array(dataset)
+
+    connection.close()
+
+    time_value = dataset
 
 
 
@@ -156,7 +175,44 @@ def predDays(days, lang):
 
     return pred
 
+def predTotal(days):
+# load data
+    time_value = pd.read_csv(path + '/datas/Totaldata.csv', encoding='gb18030')
+    time_value = pd.DataFrame(time_value, columns=['timestamp', 'repo_number'])
+
+    time_value = np.array(time_value)
+
+    keras.backend.clear_session()
+    model = load_model(path + '/models/Totalmodel.h5')
+    pred = []
+
+    while (days!= 0):
+        # get last 7 days' data
+        datas = np.array(time_value[time_value.shape[0] - 7:time_value.shape[0], 1])
+        datas = np.reshape(datas, [7, 1])
+        # scale data
+        scaler = MinMaxScaler(feature_range=(0, 1))
+        datas = scaler.fit_transform(datas)
+        dataSequence = np.reshape(datas, (1, 1, 7))
+        # predict
+        pre=model.predict(dataSequence)
+        # inverse data
+        pre = scaler.inverse_transform(pre)
+
+        update = np.reshape(['pre', pre[0][0]], [1, 2])
+        time_value = np.append(time_value, update, axis=0)
+
+        pred = np.append(pred, int(pre))
+        days-=1
+
+    del model
+    del time_value
+
+    return pred
+
+
 # a=predTill(datetime.datetime(2018,11,23),'JavaScript')
 # print(a)
 # train_model('JavaScript')
 # train_model('Perl')
+# train_model(lang="Total",total=True)

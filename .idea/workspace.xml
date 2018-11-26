@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e63c0a1-2543-41ba-8c55-cb4df2c62657" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/monthModel/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monthModel/createDataset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monthModel/mapReduce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monthModel/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monthModel/predService.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trendModel/mapReduce.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trendModel/mgdbOps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/predAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/predAPI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/createDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/trendModel/createDataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/datas/Cdata.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/datas/JavaScriptdata.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/datas/Pythondata.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/models/C++model.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/models/Cmodel.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/models/JavaScriptmodel.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/models/Javamodel.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/models/Perlmodel.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/models/Pythonmodel.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/trendModel/models/Rubymodel.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statlang/statlang/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/statlang/statlang/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py" beforeDir="false" afterPath="$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trendModel/datas/Pythondata.csv" beforeDir="false" afterPath="$PROJECT_DIR$/trendModel/datas/Pythondata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trendModel/datas/iterm.jl" beforeDir="false" afterPath="$PROJECT_DIR$/trendModel/datas/iterm.jl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trendModel/predService.py" beforeDir="false" afterPath="$PROJECT_DIR$/trendModel/predService.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,61 +24,96 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Statitic_Lang$predAPI.coverage" NAME="predAPI Coverage Results" MODIFIED="1542925231989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
-    <SUITE FILE_PATH="coverage/Statitic_Lang$predService.coverage" NAME="predService Coverage Results" MODIFIED="1542924846452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trendModel" />
+    <SUITE FILE_PATH="coverage/Statitic_Lang$mapReduce.coverage" NAME="mapReduce Coverage Results" MODIFIED="1543212634045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trendModel" />
+    <SUITE FILE_PATH="coverage/Statitic_Lang$predAPI.coverage" NAME="predAPI Coverage Results" MODIFIED="1543268490471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controller" />
+    <SUITE FILE_PATH="coverage/Statitic_Lang$predService.coverage" NAME="predService Coverage Results" MODIFIED="1543088723188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trendModel" />
+    <SUITE FILE_PATH="coverage/Statitic_Lang$mgdbOps.coverage" NAME="mgdbOps Coverage Results" MODIFIED="1543114347167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trendModel" />
     <SUITE FILE_PATH="coverage/Statitic_Lang$lstmModel.coverage" NAME="lstmModel Coverage Results" MODIFIED="1542776400069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trendModel" />
-    <SUITE FILE_PATH="coverage/Statitic_Lang$createDataset.coverage" NAME="createDataset Coverage Results" MODIFIED="1542778546038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/trendModel" />
-    <SUITE FILE_PATH="coverage/Statitic_Lang$dbug.coverage" NAME="dbug Coverage Results" MODIFIED="1542859360547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/statlang" />
+    <SUITE FILE_PATH="coverage/Statitic_Lang$dbug.coverage" NAME="dbug Coverage Results" MODIFIED="1543211837459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/statlang" />
+    <SUITE FILE_PATH="coverage/Statitic_Lang$createDataset.coverage" NAME="createDataset Coverage Results" MODIFIED="1543213347106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monthModel" />
+    <SUITE FILE_PATH="coverage/Statitic_Lang$predService__1_.coverage" NAME="predService (1) Coverage Results" MODIFIED="1543267670736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/monthModel" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="597499835">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="17" />
-          <entry key="jl" value="17" />
+          <entry key="csv" value="23" />
+          <entry key="jl" value="21" />
           <entry key="json" value="1" />
-          <entry key="py" value="42" />
+          <entry key="py" value="87" />
+          <entry key="pyi" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="Julia" value="17" />
-          <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="42" />
+          <entry key="Julia" value="21" />
+          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="Python" value="87" />
+          <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="1686" />
+          <entry key="Python Console" value="1908" />
           <entry key="jl" value="3" />
-          <entry key="py" value="6995" />
+          <entry key="py" value="10988" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Julia" value="3" />
-          <entry key="Python" value="8681" />
+          <entry key="Python" value="12896" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trendModel/createDataset.py">
+        <entry file="file://$PROJECT_DIR$/controller/predAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            <state relative-caret-position="246">
+              <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+                <marker date="1543267579891" expanded="true" signature="479:528" ph="..." />
+                <marker date="1543267579891" expanded="true" signature="593:598" ph="..." />
+                <marker date="1543267579891" expanded="true" signature="2492:2616" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/monthModel/predService.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1543268279038" expanded="true" signature="2664:3900" ph="..." />
+                <marker date="1543268279038" expanded="true" signature="3897:3900" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/monthModel/createDataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -87,39 +122,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trendModel/predService.py">
+        <entry file="file://$PROJECT_DIR$/monthModel/mapReduce.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+            <state relative-caret-position="173">
+              <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1542924846446" expanded="true" signature="339:1060" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller/predAPI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <marker date="1542925156570" expanded="true" signature="183:232" ph="..." />
-                <marker date="1542925156570" expanded="true" signature="287:292" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/statlang/dbug.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="e#24#58#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,6 +151,9 @@
       <find>item</find>
       <find>ie</find>
       <find>try</find>
+      <find>query</find>
+      <find>getpredtill</find>
+      <find>find</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,13 +168,17 @@
         <option value="$PROJECT_DIR$/trendModel/lstmModel.py" />
         <option value="$PROJECT_DIR$/statlang/iterm.jl" />
         <option value="$PROJECT_DIR$/statlang/statlang/middlewares.py" />
+        <option value="$PROJECT_DIR$/trendModel/createDataset.py" />
+        <option value="$PROJECT_DIR$/statlang/dbug.py" />
         <option value="$PROJECT_DIR$/statlang/statlang/pipelines.py" />
         <option value="$PROJECT_DIR$/trendModel/datas/iterm.jl" />
         <option value="$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py" />
-        <option value="$PROJECT_DIR$/trendModel/createDataset.py" />
+        <option value="$PROJECT_DIR$/trendModel/mapReduce.py" />
+        <option value="$PROJECT_DIR$/monthModel/createDataset.py" />
+        <option value="$PROJECT_DIR$/trendModel/mgdbOps.py" />
         <option value="$PROJECT_DIR$/trendModel/predService.py" />
         <option value="$PROJECT_DIR$/controller/predAPI.py" />
-        <option value="$PROJECT_DIR$/statlang/dbug.py" />
+        <option value="$PROJECT_DIR$/monthModel/predService.py" />
       </list>
     </option>
   </component>
@@ -174,15 +189,19 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="98" />
+    <option name="y" value="35" />
     <option name="width" value="1680" />
     <option name="height" value="952" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -198,18 +217,23 @@
             <path>
               <item name="Statitic-Lang" type="b2602c69:ProjectViewProjectNode" />
               <item name="Statitic-Lang" type="462c0819:PsiDirectoryNode" />
-              <item name="statlang" type="462c0819:PsiDirectoryNode" />
+              <item name="monthModel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Statitic-Lang" type="b2602c69:ProjectViewProjectNode" />
               <item name="Statitic-Lang" type="462c0819:PsiDirectoryNode" />
               <item name="trendModel" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Statitic-Lang" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Statitic-Lang" type="462c0819:PsiDirectoryNode" />
+              <item name="trendModel" type="462c0819:PsiDirectoryNode" />
+              <item name="datas" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,14 +244,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/trendModel/datas" />
-      <recent name="$PROJECT_DIR$/trendModel" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/trendModel" />
       <recent name="$PROJECT_DIR$/trendModel/datas" />
       <recent name="$PROJECT_DIR$/trendModel/models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/monthModel" />
+      <recent name="$PROJECT_DIR$/trendModel/datas" />
+      <recent name="$PROJECT_DIR$/trendModel" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -251,12 +276,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trendModel" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monthModel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trendModel/createDataset.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monthModel/createDataset.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -265,29 +290,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="dbug" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Statitic-Lang" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/statlang" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/statlang/dbug.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="lstmModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mapReduce" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Statitic-Lang" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,9 +303,9 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trendModel/lstmModel.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trendModel/mapReduce.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -331,7 +334,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="predService" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="predService (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Statitic-Lang" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,12 +342,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/trendModel" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monthModel" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trendModel/predService.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monthModel/predService.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -353,18 +356,37 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="predService" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Statitic-Lang" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/monthModel" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monthModel/predService.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Python.mapReduce" />
       <item itemvalue="Python.createDataset" />
-      <item itemvalue="Python.lstmModel" />
+      <item itemvalue="Python.predService (1)" />
       <item itemvalue="Python.predService" />
       <item itemvalue="Python.predAPI" />
-      <item itemvalue="Python.dbug" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.predAPI" />
         <item itemvalue="Python.predService" />
-        <item itemvalue="Python.dbug" />
+        <item itemvalue="Python.predService (1)" />
         <item itemvalue="Python.predService" />
         <item itemvalue="Python.predService" />
       </list>
@@ -384,16 +406,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="98" width="1680" height="952" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="35" width="1680" height="952" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26190478" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27106228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28801844" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4011628" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2872093" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -402,7 +423,32 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.37442395" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.37441862" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32967034" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2872093" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.37441862" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -410,31 +456,6 @@
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="right" id="Database" order="6" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24969475" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="5" weight="0.32959184" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.2897959" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="right" id="R Graphics" order="0" />
-      <window_info anchor="right" id="R Packages" order="1" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,56 +528,6 @@
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/pipelines.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/pipelines.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/pipelines.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/pipelines.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/pipelines.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/pipelines.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/pipelines.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py</url>
-          <line>28</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/trendModel/predService.py</url>
           <line>98</line>
           <option name="timeStamp" value="98" />
@@ -583,22 +554,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/trendModel/predService.py</url>
-          <line>124</line>
+          <line>125</line>
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/trendModel/predService.py</url>
-          <line>129</line>
+          <line>148</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/trendModel/predService.py</url>
-          <line>130</line>
+          <line>149</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/trendModel/predService.py</url>
-          <line>132</line>
+          <line>151</line>
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -608,8 +579,88 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/controller/predAPI.py</url>
-          <line>31</line>
+          <line>41</line>
           <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trendModel/mgdbOps.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trendModel/mgdbOps.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trendModel/mgdbOps.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/statlang/statlang/pipelines.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/trendModel/mgdbOps.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/createDataset.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/controller/predAPI.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/predService.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/predService.py</url>
+          <line>103</line>
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/predService.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/predService.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/predService.py</url>
+          <line>130</line>
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/predService.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/predService.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/monthModel/predService.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="164" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -716,55 +767,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trendModel/lstmModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <marker date="1542837513504" expanded="true" signature="460:1070" ph="..." />
-            <marker date="1542837513504" expanded="true" signature="1455:1456" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/statlang/setup.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/statlang/statlang/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1235" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="10" selection-end-line="103" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statlang/statlang/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="e#193#206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/statlang/statlang/items.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statlang/statlang/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trendModel/datas/Pythondata.csv" />
     <entry file="file://$PROJECT_DIR$/trendModel/datas/JavaScriptdata.csv">
@@ -773,11 +780,6 @@
     <entry file="file://$PROJECT_DIR$/trendModel/datas/HTMLdata.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18275" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trendModel/datas/C#data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39401" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statlang/iterm.jl">
@@ -800,57 +802,208 @@
         <state relative-caret-position="-45667" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trendModel/datas/Perldata.csv">
+    <entry file="file://$PROJECT_DIR$/statlang/statlang/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12427" />
+        <state relative-caret-position="106">
+          <caret line="79" column="32" lean-forward="true" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trendModel/datas/iterm.jl">
+    <entry file="file://$PROJECT_DIR$/statlang/statlang/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="3400" selection-start-line="3400" selection-end-line="3400" />
+        <state relative-caret-position="195">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/untitled8/lib/python3.6/site-packages/pymongo/collection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="2178" column="26" selection-start-line="2178" selection-start-column="21" selection-end-line="2178" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/datetime.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-307">
+          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/untitled8/lib/python3.6/site-packages/pymongo/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="209" selection-start-line="209" selection-end-line="209" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/statlang/dbug.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#24#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/statlang/statlang/spiders/spider_lang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statlang/statlang/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding>
+            <element signature="e#193#204#0" expanded="true" />
+            <marker date="1543211579352" expanded="true" signature="560:565" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trendModel/createDataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        <state relative-caret-position="483">
+          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trendModel/lstmModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-757">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1542837513504" expanded="true" signature="460:1070" ph="..." />
+            <marker date="1542837513504" expanded="true" signature="1455:1456" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/untitled8/lib/python3.6/site-packages/py/_path/local.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trendModel/mapReduce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="46" column="61" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trendModel/datas/C#data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43422" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trendModel/datas/Perldata.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12432" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trendModel/mgdbOps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1543265663882" expanded="true" signature="287:288" ph="..." />
+            <marker date="1543265663882" expanded="true" signature="1079:1084" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trendModel/datas/iterm.jl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="3404" column="2" lean-forward="true" selection-start-line="3404" selection-start-column="2" selection-end-line="3404" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trendModel/datas/Totaldata.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="3389" column="16" selection-start-line="3389" selection-start-column="16" selection-end-line="3389" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trendModel/predService.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="135" column="12" selection-start-line="135" selection-start-column="12" selection-end-line="135" selection-end-column="12" />
+        <state relative-caret-position="70">
+          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1542924846446" expanded="true" signature="339:1060" ph="..." />
+            <marker date="1543265963049" expanded="true" signature="403:1117" ph="..." />
+            <marker date="1543265963049" expanded="true" signature="5707:5708" ph="..." />
+            <marker date="1543265963049" expanded="true" signature="5707:6726" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monthModel/mapReduce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monthModel/createDataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/predAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="246">
+          <caret line="71" column="17" lean-forward="true" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1542925156570" expanded="true" signature="183:232" ph="..." />
-            <marker date="1542925156570" expanded="true" signature="287:292" ph="..." />
+            <marker date="1543267579891" expanded="true" signature="479:528" ph="..." />
+            <marker date="1543267579891" expanded="true" signature="593:598" ph="..." />
+            <marker date="1543267579891" expanded="true" signature="2492:2616" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monthModel/predService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="122" column="63" selection-start-line="122" selection-start-column="63" selection-end-line="122" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1543268279038" expanded="true" signature="2664:3900" ph="..." />
+            <marker date="1543268279038" expanded="true" signature="3897:3900" ph="..." />
           </folding>
         </state>
       </provider>

@@ -13,6 +13,7 @@ def timeadd(timein):
 
 
 def convert_time(timein):
+    #return timein,timein + 1day
 
     if isinstance(timein,str):
         timein=datetime.datetime.strptime(timein,"%Y-%m-%dT%H:%M:%S")
@@ -24,6 +25,8 @@ def convert_time(timein):
 
     return dt_start, dt_end
 
+
+# date_today=datetime.date(2018,11,24)
 date_today=datetime.date.today()
 date_today=datetime.datetime(date_today.year,date_today.month,date_today.day)-datetime.timedelta(days=1)
 date_begin = date_today
