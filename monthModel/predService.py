@@ -96,10 +96,32 @@ def evaluate():
 def predTop10():
     lang_list = ['C#', 'C++', 'CSS', 'HTML', 'Java', 'JavaScript', 'PHP', 'Python', 'Ruby', 'TypeScript']
     top10 = {}
-    for lang in lang_list:
-        pred = predMonth(1, lang=lang, lookback=12)
-        # top10.append([lang,pred[0]])
-        top10[lang] = pred[0]
+
+    connection = MongoClient('0.0.0.0', 27017)
+
+    db = connection.GHUserAnalyse
+
+    set = db.Top10Pred
+
+    timestamp=datetime.date.today()
+    timestamp=datetime.datetime(timestamp.year,timestamp.month,1)
+    if (set.count({'timestamp': timestamp}) != 0):
+        results=set.find({'timestamp':timestamp})
+        for result in results:
+            top10[result['language']]=result['amount']
+    else:
+        for lang in lang_list:
+            pred = predMonth(1, lang=lang, lookback=12)
+            # top10.append([lang,pred[0]])
+            top10[lang] = pred[0]
+            language={
+                'timestamp':timestamp,
+                "language":lang,
+                'amount':pred[0]
+
+            }
+            set.insert(language)
+    connection.close()
     # sorted(top10,key=lambda top10:top10[1])
     # top10_sort = sorted(top10.items(), key=lambda top10: top10[1],reverse=True)
     #
