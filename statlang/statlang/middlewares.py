@@ -11,7 +11,7 @@ from scrapy.downloadermiddlewares.retry import RetryMiddleware
 from scrapy.downloadermiddlewares.retry import RetryMiddleware
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 from scrapy.utils.response import response_status_message
-from scrapy_crawlera import CrawleraMiddleware
+#from scrapy_crawlera import CrawleraMiddleware
 import time
 
 import random

@@ -1257,3 +1257,5 @@ ValueError: time data '1' does not match format '%Y%m%d'
 132.205.11.40 - - [27/Nov/2018 17:50:22] "[37mGET /api/pred/days/total/?days=14 HTTP/1.1[0m" 200 -
 132.205.229.176 - - [27/Nov/2018 18:09:57] "[37mGET /api/pred/days/?days=5&language=Python HTTP/1.1[0m" 200 -
 132.205.229.176 - - [27/Nov/2018 18:10:03] "[37mGET /api/pred/days/?days=5&language=Java HTTP/1.1[0m" 200 -
+185.156.177.43 - - [27/Nov/2018 19:03:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.156.177.43 - - [27/Nov/2018 19:03:47] "[1m[35m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
