@@ -92,6 +92,6 @@ def pred_Total():
 
 if __name__ == '__main__':
     # get localhost:2222/api/date=20180101&language=Python
-    # app.run(host="172.31.31.247", port=2222)
-    app.run(host="0.0.0.0", port=2222)
+    app.run(host="172.31.31.247", port=2222)
+    # app.run(host="0.0.0.0", port=2222)
     # "+"和"#"转成ASCII码值 '%2B'和'%23'

@@ -39,4 +39,4 @@ def find():
     for i in set.find({'language':'Python'}):
         print(i)
 
-find()
+write()
