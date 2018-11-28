@@ -166,7 +166,7 @@ def draw(model,language):
 
 # a=predTill(datetime.datetime(2018,11,23),'JavaScript')
 # print(a)
-predTop10()
+# predTop10()
 # train_model('Perl')
 # train_model(lang="TypeScript")
 #

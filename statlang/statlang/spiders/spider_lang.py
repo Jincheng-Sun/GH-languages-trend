@@ -26,7 +26,7 @@ def convert_time(timein):
     return dt_start, dt_end
 
 
-#date_today=datetime.date(2018,11,27)
+# date_today=datetime.date(2018,11,28)
 date_today=datetime.date.today()
 date_today=datetime.datetime(date_today.year,date_today.month,date_today.day)-datetime.timedelta(days=1)
 date_begin = date_today

@@ -16,6 +16,7 @@ class StatlangPipeline(object):
         self.connection = MongoClient('0.0.0.0', 27017)
         db = self.connection.GHUserAnalyse
         self.set = db.Top10Lang
+        self.set2 = db.TotalRepoAmount
 
         self.file = open(filepath, 'a+')
     def close_spider(self,spider):
@@ -32,6 +33,12 @@ class StatlangPipeline(object):
         if (self.set.count({'timestamp':timestamp})!=0):
             print('[LOG]: data of %s all ready exists'%item['timestamp'])
         else:
+            total = {
+                'timestamp': timestamp,
+
+                'amount': item['repo_num']
+            }
+            self.set2.insert(total)
             for i in range(0, 10):
                 language = {
                     'timestamp': timestamp,

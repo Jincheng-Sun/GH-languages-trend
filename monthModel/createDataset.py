@@ -11,12 +11,18 @@ connection = MongoClient('0.0.0.0',27017)
 db = connection.GHUserAnalyse
 
 set = db.MonAvgLang
+set2 = db.TotalRepoAmount
 
 def parseJson(lang,total=False):
     dataset=[]
-    results = set.find({'language': lang})
-    for result in results:
-        dataset.append([result['month_avg']])
+    if not total:
+        results = set.find({'language': lang})
+        for result in results:
+            dataset.append([result['month_avg']])
+    else:
+        results = set.find()
+        for result in results:
+            dataset.append([result['amount']])
 
     dataset=np.array(dataset)
     trainSeq = dataset[0:int(len(dataset) * 0.8)]

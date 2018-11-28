@@ -177,11 +177,26 @@ def predDays(days, lang):
 
 def predTotal(days):
 # load data
-    time_value = pd.read_csv(path + '/datas/Totaldata.csv', encoding='gb18030')
-    time_value = pd.DataFrame(time_value, columns=['timestamp', 'repo_number'])
 
-    time_value = np.array(time_value)
+    connection = MongoClient('0.0.0.0', 27017)
 
+    db = connection.GHUserAnalyse
+
+    set = db.TotalRepoAmount
+
+    results = set.find({})
+
+
+    dataset = []
+    for result in results:
+        dataset.append([result['timestamp'], result['amount']])
+
+    dataset = np.array(dataset)
+    print(dataset)
+    connection.close()
+
+
+    time_value = dataset
     keras.backend.clear_session()
     model = load_model(path + '/models/Totalmodel.h5')
     pred = []
@@ -216,3 +231,6 @@ def predTotal(days):
 # train_model('JavaScript')
 # train_model('Perl')
 # train_model(lang="Total",total=True)
+# train_model("Total",total=True)
+# a=predTotal(12)
+# print(a)

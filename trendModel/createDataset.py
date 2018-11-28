@@ -2,6 +2,7 @@ import jsonlines
 import datetime
 import numpy as np
 import pandas as pd
+from pymongo import MongoClient
 
 from sklearn.preprocessing import MinMaxScaler
 import os
@@ -68,3 +69,23 @@ def create_dataset(dataseq,look_back=7):
         dataY.append(dataseq[i + look_back, 0])
     return np.array(dataX), np.array(dataY)
 
+def uploadDB():
+
+    connection = MongoClient('0.0.0.0', 27017)
+
+    db = connection.GHUserAnalyse
+
+    set = db.TotalRepoAmount
+    with open(filename, 'r+', encoding='utf8') as f:
+        for item in jsonlines.Reader(f):
+            l=''
+            n=0
+            timestamp = datetime.datetime.strptime(item['timestamp'], "%Y-%m-%dT%H:%M:%S")
+            n=float(item['repo_num'])
+            total={
+                'timestamp':timestamp,
+                'amount':n
+            }
+            result=set.insert(total)
+
+# uploadDB()
