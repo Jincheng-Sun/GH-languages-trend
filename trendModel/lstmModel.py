@@ -93,3 +93,4 @@ def plotall():
     plt.plot(trainPredictPlot, label='trainset')
     plt.plot(testPredictPlot, label='test')
     plt.show()
+plotall()

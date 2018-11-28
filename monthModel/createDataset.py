@@ -14,7 +14,7 @@ set = db.MonAvgLang
 
 def parseJson(lang,total=False):
     dataset=[]
-    results = set.find({'language': 'Python'})
+    results = set.find({'language': lang})
     for result in results:
         dataset.append([result['month_avg']])
 

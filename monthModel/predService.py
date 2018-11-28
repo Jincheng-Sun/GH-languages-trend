@@ -159,6 +159,10 @@ def getAverage(timestamp):
 
     return languages
 
+def draw(model,language):
+    trainSeq, testSeq, dataset = parseJson(language, True)
+    pass
+
 
 # a=predTill(datetime.datetime(2018,11,23),'JavaScript')
 # print(a)
@@ -171,4 +175,4 @@ def getAverage(timestamp):
 # a=getAverage("Python",datetime.datetime(2018,1,1))
 # for item in a:
 #     print(item.value)
-a = getAverage(20180201)
+# a = getAverage(20180201)
